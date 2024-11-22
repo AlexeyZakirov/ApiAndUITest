@@ -9,8 +9,8 @@ import static io.restassured.RestAssured.given;
 public class AuthorizationApi {
 
     public static ResponseLoginModel getAuthorization() {
-        String username = System.getProperty("userName", "tinwhip");
-        String password = System.getProperty("password", "Password@123!");
+        String username = System.getProperty("userNameAPI", "tinwhip");
+        String password = System.getProperty("passwordAPI", "Password@123!");
         LoginModel login = new LoginModel(username, password);
         return given()
                 .body(login)
